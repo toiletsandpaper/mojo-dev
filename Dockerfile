@@ -33,8 +33,8 @@ RUN curl https://get.modular.com | sh -
 # https://github.com/MoSafi2/BlazeSeq/blob/main/.github/workflows/package.yml
 RUN modular auth examples
 
-RUN modular install mojo
-# RUN modular install nightly/mojo
+# RUN modular install mojo
+RUN modular install nightly/mojo
 
 RUN echo export MODULAR_HOME="/root/.modular" >> ~/.bashrc
 RUN echo export PATH="/root/.modular/pkg/packages.modular.com_nightly_mojo/bin:$PATH" >> ~/.bashrc
