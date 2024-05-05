@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
-LABEL org.opencontainers.image.source="https://github.com/toiletsandpaper/mojo-nightly-ubuntu-dev-container/"
-LABEL org.opencontainers.image.description="Mojo nightly dev container"
+LABEL org.opencontainers.image.source="https://github.com/toiletsandpaper/mojo-dev"
+LABEL org.opencontainers.image.description="Mojo Stable Development Container"
 LABEL org.opencontainers.image.licenses=MIT
 
 RUN apt-get update -y \
@@ -33,8 +33,8 @@ RUN curl https://get.modular.com | sh -
 # https://github.com/MoSafi2/BlazeSeq/blob/main/.github/workflows/package.yml
 RUN modular auth examples
 
-# RUN modular install mojo
-RUN modular install nightly/mojo
+RUN modular install mojo
+# RUN modular install nightly/mojo
 
 RUN echo export MODULAR_HOME="/root/.modular" >> ~/.bashrc
 RUN echo export PATH="/root/.modular/pkg/packages.modular.com_nightly_mojo/bin:$PATH" >> ~/.bashrc
