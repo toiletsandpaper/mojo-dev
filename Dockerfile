@@ -37,6 +37,6 @@ RUN modular install mojo
 # RUN modular install nightly/mojo
 
 RUN echo export MODULAR_HOME="/root/.modular" >> ~/.bashrc
-RUN echo export PATH="/root/.modular/pkg/packages.modular.com_nightly_mojo/bin:$PATH" >> ~/.bashrc
+RUN echo export PATH="/root/.modular/pkg/packages.modular.com_mojo/bin:$PATH" >> ~/.bashrc
 
 ENTRYPOINT [ "bash" ]
