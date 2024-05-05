@@ -3,7 +3,7 @@
 I'm a Fedora user and installing and updating Mojo outside Ubuntu is a mess.
 Of course, I can create VM in Boxes or anything similiar, but this is also a mess and uses too much resources.
 
-So, I've decided to use [VS Code Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.emote-containers)
+So, I've decided to use [VS Code Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 in container. And I've wrote a Containerfile that will install Mojo automatically in a container, so you can just pull it from hub and use :)
 
 ## Installation
@@ -25,10 +25,10 @@ podman run --name mojo_stable -id ghcr.io/toiletsandpaper/mojo-dev:stable
 podman run --name mojo_nightly -id ghcr.io/toiletsandpaper/mojo-dev:nightly
 ```
 
-## Using with [VS Code Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.emote-containers)
+## Using with [VS Code Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
 0. Run Mojo containers in __detached__ mode (`-d` or `-id`)
-1. Install the extension from [marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.emote-containers)
+1. Install the extension from [marketplace](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 2. In VSCode press `F1`  or press `><` logo in left bottom corner and find `Dev Containers: Attach to Running Container...`
 3. Select `mojo_stable` or `mojo_nightly` container
 4. Wait until VSCode setup a server inside container
